@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hart-Hart</title>
+    <title>May I Court You?</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>May I court you?</h1>
-
-    <!-- Images (Ensure the filenames are correct) -->
-    <img src="6254609c996571a1488e46d1cc702bb5.jpg" alt="Cute cat 1">
-    <img src="746d22074e49005b011d15c43bdcb596.jpg" alt="Cute cat 2">
-    <img src="8248857610db7251980522a565688009.jpg" alt="Cute cat 3">
-    <img src="c66a4dd2a9b3b05118dcb453c7adc177.jpg" alt="Cute cat 4">
-    <img src="d42a8832b71ea3da13fa07f884fa039.jpg" alt="Cute cat 5">
-
-    <div class="buttons">
-        <button id="yes-btn">Yes</button>
-        <button id="no-btn">No</button>
+    <h2 id="question">May I court you?</h2>
+    <div id="button-container">
+        <button class="button" id="yes-btn" onclick="firstYes()">Yes</button>
+        <button class="button" id="no-btn" onclick="firstNo()">No</button>
     </div>
 
-    <p id="question"></p>
+    <div id="follow-up" style="display: none;">
+        <h2 id="follow-up-question"></h2>
+        <div id="follow-up-buttons">
+            <button class="button" id="option1" onclick="option1Click()"></button>
+            <button class="button" id="option2" onclick="option2Click()"></button>
+        </div>
+    </div>
+
+    <img id="crying-cat" src="d4248382b71ea3da1f3fa07f8844fe39.jpg" alt="Crying Cat">
 
     <script src="script.js"></script>
 </body>
