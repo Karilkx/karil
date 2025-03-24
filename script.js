@@ -1,10 +1,35 @@
-document.addEventListener("DOMContentLoaded", function () {
-    let yesBtn = document.getElementById("yes-btn");
-    let noBtn = document.getElementById("no-btn");
-    let size = 16; // Default font size for "Yes" button
+function firstYes() {
+    document.getElementById("question").style.display = "none";
+    document.getElementById("button-container").style.display = "none";
+    document.getElementById("follow-up").style.display = "block";
+    document.getElementById("follow-up-question").innerText = "Are you sure? 🤩";
+    document.getElementById("option1").innerText = "Yes";
+    document.getElementById("option2").innerText = "Joke";
+}
 
-    noBtn.addEventListener("mouseover", function () {
-        size += 5; // Increase size
-        yesBtn.style.fontSize = size + "px";
-    });
-});
+function firstNo() {
+    document.getElementById("question").style.display = "none";
+    document.getElementById("button-container").style.display = "none";
+    document.getElementById("follow-up").style.display = "block";
+    document.getElementById("follow-up-question").innerText = "Pls?";
+    document.getElementById("option1").innerText = "Cge na nga";
+    document.getElementById("option2").innerText = "Ayuko";
+}
+
+function option1Click() {
+    alert("Yay! 😍");
+}
+
+function option2Click() {
+    let question = document.getElementById("follow-up-question").innerText;
+
+    if (question === "Pls?") {
+        document.getElementById("follow-up-question").innerText = "Awa nalang?";
+        document.getElementById("option1").innerText = "Fine...";
+        document.getElementById("option2").innerText = "Ayuko pa rin";
+    } 
+    else if (question === "Awa nalang?") {
+        document.getElementById("follow-up").style.display = "none";
+        document.getElementById("crying-cat").style.display = "block";
+    }
+}
