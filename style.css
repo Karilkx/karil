@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #ffe6e6;
+    padding: 20px;
+}
+
+h1 {
+    color: #ff4d4d;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#yes-btn {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+#no-btn {
+    background-color: #333;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+#question {
+    font-size: 18px;
+    margin-top: 20px;
+    color: #333;
+}
